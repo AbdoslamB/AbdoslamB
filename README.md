@@ -14,7 +14,7 @@
   
 <!-- START_SECTION:github-readme-streak-stats-themes -->
 <p align="left">
-<img src="https://github-readme-stats.vercel.app/api?username=AbdoslamB&show_icons=true&include_all_commits=true&count_private=true&theme=blue-green&background=00000000" alt="GitHub Stats for AbdoslamB" width="500">
+<img src="https://github-readme-stats.vercel.app/api?username=AbdoslamB&show_icons=true&include_all_commits=true&count_private=trueuser=AbdoslamB&theme=blue-green&background=00000000" alt="GitHub Stats for AbdoslamB" width="500">
 </p>
 
 <p align="left">
@@ -22,6 +22,6 @@
 </p>
 
 <p align="left">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdoslamB&theme=blue-green&background=00000000&layout=compact&hide_border=true" width="400">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdoslamB&theme=blue-green&background=00000000&hide_border=true" width="400">
 </p>
 <!--END_SECTION:github-readme-streak-stats-themes-->
