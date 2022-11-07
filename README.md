@@ -14,7 +14,7 @@
   
 <!-- START_SECTION:github-readme-streak-stats-themes -->
 <p align="left">
-<img src="https://github-readme-stats.vercel.app/api?username=AbdoslamB&show_icons=true&include_all_commits=true&count_private=trueuser=AbdoslamB&theme=blue-green&background=00000000" alt="GitHub Stats for AbdoslamB" width="500">
+<img src="https://github-readme-stats.vercel.app/api?username=AbdoslamB&show_icons=true&include_all_commits=true&count_private=true&theme=blue-green&background=00000000" alt="GitHub Stats for AbdoslamB" width="500">
 </p>
 
 <p align="left">
