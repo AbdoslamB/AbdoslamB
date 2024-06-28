@@ -23,6 +23,6 @@
 
 
 <p align="left">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdoslamB&theme=blue-green&bg_color=00000000&hide_border=true" width="400">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdoslamB&theme=blue-green&bg_color=00000000&hide_border=true" width="450">
 </p>
 <!--END_SECTION:github-readme-streak-stats-themes-->
