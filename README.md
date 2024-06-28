@@ -10,7 +10,7 @@
 <a href="https://www.instagram.com/abdoslambaabbad/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" /></a>
 <!--END_SECTION:Find me also on-->
 &nbsp;
-<!--START_SECTION:Find me also on-->
+<!--START_SECTION:Find me also on -- this part is NOT working  The SVG code is inline and quite complex, which GitHub might be stripping out -->
 <p align="left">
     <a href="https://www.linkedin.com/in/abdoslambaabbad/" target="_blank">
         <svg height="30" width="40" viewBox="0 0 24 24" fill="#d1d1d1">
