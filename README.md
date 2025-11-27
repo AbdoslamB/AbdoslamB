@@ -36,8 +36,7 @@
 <img src="https://github-readme-streak-stats.herokuapp.com?user=AbdoslamB&theme=blue-green&background=00000000" width="500">
 </p>
 
-
 <p align="left">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdoslamB&theme=blue-green&bg_color=00000000&hide_border=true" width="400">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbdoslamB&theme=blue-green&bg_color=00000000&hide_border=true&hide=javascript,html,coffeescript" alt="Top Languages" width="400" />
 </p>
 <!--END_SECTION:github-readme-streak-stats-themes-->
