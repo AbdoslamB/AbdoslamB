@@ -1,7 +1,11 @@
 
-![GitHub Views](https://komarev.com/ghpvc/?username=AbdoslamB&color=2f96c0)
 
-## Hey, I'm Abdoslam <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">
+    
+# Hey, I'm Abdoslam <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">
+![GitHub Views](https://komarev.com/ghpvc/?username=AbdoslamB&color=blue)
+<img alt="Python" src="https://img.shields.io/badge/Python-3.14-red" />
+<img alt="Docker" src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat&logo=docker&logoColor=FFFFFF" />
+
 
 ### 🔗  Find me also on :
 <!--START_SECTION:Find me also on-->
