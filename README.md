@@ -33,7 +33,7 @@
   
 <!-- START_SECTION:github-readme-streak-stats-themes -->
 <p align="left">
-<img src="https://github-readme-stats.vercel.app/api?username=AbdoslamB&show_icons=true&include_all_commits=true&count_private=true&theme=blue-green&bg_color=00000000" alt="GitHub Stats for AbdoslamB" width="500">
+<img src="https://github-readme-stats-jxareas.vercel.app/api?username=AbdoslamB&show_icons=true&include_all_commits=true&count_private=true&theme=blue-green&bg_color=00000000" alt="GitHub Stats for AbdoslamB" width="500">
 </p>
 
 <p align="left">
@@ -41,6 +41,9 @@
 </p>
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbdoslamB&theme=blue-green&bg_color=00000000&hide_border=true&hide=javascript,html,coffeescript" alt="Top Languages" width="400" />
+  <img src="https://github-readme-stats-jxareas.vercel.app/api/top-langs/?username=AbdoslamB&theme=blue-green&bg_color=00000000&hide_border=true&hide=javascript,html,coffeescript" alt="Top Languages" width="400" />
 </p>
+
+<!-- Another graph  <img src="https://github-readme-activity-graph.vercel.app/graph?username=AbdoslamB&theme=chartreuse-dark" width="100%"/>
+
 <!--END_SECTION:github-readme-streak-stats-themes-->
