@@ -22,7 +22,7 @@ jobs:
         with:
           options: "user=AbdoslamB&theme=blue-green&background=00000000&hide_border=true"
           path: profile/streak.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STREAK_TOKEN }}
 
       - name: Commit and push
         run: |
