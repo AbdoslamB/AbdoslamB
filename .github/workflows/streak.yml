@@ -29,7 +29,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: "username=AbdoslamB&theme=blue-green&bg_color=00000000&hide_border=true&hide=javascript,html,coffeescript&count_private=true"
+          options: "username=AbdoslamB&theme=blue-green&bg_color=00000000&hide_border=true&hide=javascript,html,coffeescript&count_private=true&size_weight=0.5&count_weight=0.5&langs_count=6"
           path: profile/top-langs.svg
           token: ${{ secrets.STATS_TOKEN }}
 
@@ -45,6 +45,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/*.svg
-          git commit -m "chore: update stat cards" || echo "no changes"
+          git commit -m "chore: update stat cards [skip ci]" || echo "no changes"
           git pull --rebase
           git push
