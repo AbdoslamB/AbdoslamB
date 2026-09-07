@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - ".github/workflows/stats.yml"
+      - ".github/workflows/streak.yml"
 
 permissions:
   contents: write
