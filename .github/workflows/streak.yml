@@ -23,7 +23,7 @@ jobs:
           card: stats
           options: "username=AbdoslamB&show_icons=true&include_all_commits=true&count_private=true&theme=blue-green&bg_color=00000000"
           path: profile/stats.svg
-          token: ${{ secrets.STATS_TOKEN }}
+          token: ${{ secrets.STREAK_TOKEN }}
 
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
@@ -31,14 +31,14 @@ jobs:
           card: top-langs
           options: "username=AbdoslamB&theme=blue-green&bg_color=00000000&hide_border=true&hide=javascript,html,coffeescript&count_private=true&size_weight=0.5&count_weight=0.5&langs_count=6"
           path: profile/top-langs.svg
-          token: ${{ secrets.STATS_TOKEN }}
+          token: ${{ secrets.STREAK_TOKEN }}
 
       - name: Generate streak stats card
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
           options: "user=AbdoslamB&theme=blue-green&background=00000000&hide_border=true"
           path: profile/streak.svg
-          token: ${{ secrets.STATS_TOKEN }}
+          token: ${{ secrets.STREAK_TOKEN }}
 
       - name: Commit and push cards
         run: |
