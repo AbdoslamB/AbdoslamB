@@ -10,17 +10,14 @@
 <a href="https://www.linkedin.com/in/abdoslambaabbad/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="linkedin" height="30" width="40" /></a>
 <a href="https://www.instagram.com/abdoslambaabbad/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" /></a>
 <!--END_SECTION:Find me also on-->
-&nbsp;
-
-&nbsp;
 
 <!-- START_SECTION:github-readme-streak-stats-themes -->
 <p align="left">
-   <img src="./profile/stats.svg" alt="GitHub Stats for AbdoslamB" width="500">
+  <img src="./profile/stats.svg" alt="GitHub Stats for AbdoslamB" width="500">
 </p>
 
 <p align="left">
-<img src="./profile/streak.svg" alt="GitHub Streak for AbdoslamB" width="500">
+  <img src="./profile/streak.svg" alt="GitHub Streak for AbdoslamB" width="500">
 </p>
 
 <p align="left">
