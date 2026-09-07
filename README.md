@@ -13,14 +13,14 @@
 
 <!-- START_SECTION:github-readme-streak-stats-themes -->
 <p align="left">
-  <img src="./profile/stats.svg" alt="GitHub Stats for AbdoslamB" width="500">
+  <img src="./profile/stats.svg?v=1" alt="GitHub Stats for AbdoslamB" width="500">
 </p>
 
 <p align="left">
-  <img src="./profile/streak.svg" alt="GitHub Streak for AbdoslamB" width="500">
+  <img src="./profile/streak.svg?v=1" alt="GitHub Streak for AbdoslamB" width="500">
 </p>
 
 <p align="left">
-  <img src="./profile/top-langs.svg" alt="Top Languages" width="400" />
+  <img src="./profile/top-langs.svg?v=1" alt="Top Languages" width="400" />
 </p>
 <!--END_SECTION:github-readme-streak-stats-themes-->
