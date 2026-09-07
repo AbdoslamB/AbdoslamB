@@ -16,7 +16,7 @@
 
 <!-- START_SECTION:github-readme-streak-stats-themes -->
 <p align="left">
-<img src="https://github.com/AbdoslamB/github-stats/blob/generated/overview.svg" alt="GitHub Stats for AbdoslamB" width="500">
+   <img src="./profile/stats.svg" alt="GitHub Stats for AbdoslamB" width="500">
 </p>
 
 <p align="left">
