@@ -1,0 +1,91 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 390 307"
+  width="100%"
+  height="auto"
+  fill="none"
+  role="img"
+>
+  <title>Most Used Languages</title>
+  <style>
+    .mobile-header {
+      font: 700 22px 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: #2f97c1;
+      animation: fadeInAnimation 0.8s ease-in-out forwards;
+    }
+    .mobile-lang-name {
+      font: 700 17px "Segoe UI", Ubuntu, Sans-Serif;
+      fill: #0cf574;
+    }
+    .mobile-lang-pct {
+      font: 700 17px "Segoe UI", Ubuntu, Sans-Serif;
+      fill: #0cf574;
+    }
+    .stagger {
+      opacity: 0;
+      animation: fadeInAnimation 0.5s ease-in-out forwards;
+    }
+    @keyframes fadeInAnimation {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+
+  <rect
+    x="0.5"
+    y="0.5"
+    rx="4.5"
+    width="389"
+    height="306"
+    stroke="#e4e2e2"
+    stroke-opacity="1"
+    fill="#00000000"
+  />
+
+  <g transform="translate(20, 40)">
+    <text x="0" y="0" class="mobile-header">Most Used Languages</text>
+  </g>
+
+  <g data-testid="main-card-body">
+  <g transform="translate(20, 65)">
+    <g class="stagger" style="animation-delay: 300ms">
+      <text x="0" y="16" class="mobile-lang-name">Python</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">63.51%</text>
+      <svg x="0" y="24" width="350" height="16" overflow="hidden">
+        <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
+        <rect width="63.51%" height="16" fill="#3572A5" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(20, 121)">
+    <g class="stagger" style="animation-delay: 420ms">
+      <text x="0" y="16" class="mobile-lang-name">R</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">26.46%</text>
+      <svg x="0" y="24" width="350" height="16" overflow="hidden">
+        <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
+        <rect width="26.46%" height="16" fill="#198CE7" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(20, 177)">
+    <g class="stagger" style="animation-delay: 540ms">
+      <text x="0" y="16" class="mobile-lang-name">TSQL</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">8.30%</text>
+      <svg x="0" y="24" width="350" height="16" overflow="hidden">
+        <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
+        <rect width="8.30%" height="16" fill="#e38c00" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(20, 233)">
+    <g class="stagger" style="animation-delay: 660ms">
+      <text x="0" y="16" class="mobile-lang-name">SQL</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">1.73%</text>
+      <svg x="0" y="24" width="350" height="16" overflow="hidden">
+        <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
+        <rect width="1.73%" height="16" fill="#e38c00" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+      </svg>
+    </g>
+  </g>
+  </g>
+</svg>
