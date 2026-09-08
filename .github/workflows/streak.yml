@@ -85,8 +85,7 @@ jobs:
               }}
               .rank-circle-anim {{
                 opacity: 0;
-                animation: rankScale 0.6s ease-out 350ms forwards;
-                transform-origin: 0px 0px;
+                animation: fadeInAnimation 0.6s ease-out 350ms forwards;
               }}
               .rank-text {{
                 font: 800 26px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -117,25 +116,9 @@ jobs:
               @keyframes fadeInAnimation {{
                 from {{
                   opacity: 0;
-                  transform: translateX(-8px);
                 }}
                 to {{
                   opacity: 1;
-                  transform: translateX(0);
-                }}
-              }}
-              @keyframes rankScale {{
-                0% {{
-                  opacity: 0;
-                  transform: scale(0.3);
-                }}
-                70% {{
-                  opacity: 1;
-                  transform: scale(1.1);
-                }}
-                100% {{
-                  opacity: 1;
-                  transform: scale(1);
                 }}
               }}
             </style>
@@ -254,8 +237,7 @@ jobs:
               }}
               .rank-circle-anim {{
                 opacity: 0;
-                animation: rankScale 0.6s ease-out 350ms forwards;
-                transform-origin: 200px 320px;
+                animation: fadeInAnimation 0.6s ease-out 350ms forwards;
               }}
               .rank-text {{
                 font: 800 34px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -291,25 +273,9 @@ jobs:
               @keyframes fadeInAnimation {{
                 from {{
                   opacity: 0;
-                  transform: translateX(-8px);
                 }}
                 to {{
                   opacity: 1;
-                  transform: translateX(0);
-                }}
-              }}
-              @keyframes rankScale {{
-                0% {{
-                  opacity: 0;
-                  transform: scale(0.3);
-                }}
-                70% {{
-                  opacity: 1;
-                  transform: scale(1.1);
-                }}
-                100% {{
-                  opacity: 1;
-                  transform: scale(1);
                 }}
               }}
             </style>
