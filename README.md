@@ -1,3 +1,5 @@
+# Hey, I'm Abdoslam <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">
+
 <p align="left">
   <img src="https://komarev.com/ghpvc/?username=AbdoslamB&color=blue" alt="GitHub Views" />
   <img alt="Fintech" src="https://img.shields.io/badge/Fintech-0052FF?style=flat&logo=buffer&logoColor=white" />
@@ -7,10 +9,7 @@
   <img alt="SQL" src="https://img.shields.io/badge/SQL-CC292B?style=flat&logo=microsoftsqlserver&logoColor=white" />
 </p>
 
-
-
-### 🔗  Find me also on :
-<!--START_SECTION:Find me also on-->
+### 🔗 Find me also on :
 <p align="left">
   <a href="https://www.linkedin.com/in/abdoslambaabbad/" target="_blank">
     <img src="./profile/linkedin.svg" alt="LinkedIn" />
@@ -20,19 +19,12 @@
   </a>
 </p>
 
-
-<!--END_SECTION:Find me also on-->
-
-<!-- START_SECTION:github-readme-streak-stats-themes -->
 <p align="left">
-  <img src="./profile/stats.svg?v=1" alt="GitHub Stats for AbdoslamB" width="500">
+  <img src="./profile/stats.svg?v=1" alt="GitHub Stats for AbdoslamB" width="495">
 </p>
-
 <p align="left">
-  <img src="./profile/streak.svg?v=1" alt="GitHub Streak for AbdoslamB" width="500">
+  <img src="./profile/streak.svg?v=1" alt="GitHub Streak for AbdoslamB" width="495">
 </p>
-
 <p align="left">
-  <img src="./profile/top-langs.svg?v=1" alt="Top Languages" width="400" />
+  <img src="./profile/top-langs.svg?v=1" alt="Top Languages" width="370">
 </p>
-<!--END_SECTION:github-readme-streak-stats-themes-->
