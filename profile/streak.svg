@@ -24,7 +24,7 @@
     <line x1='66.6%' y1='28' x2='66.6%' y2='170' stroke='#E4E2E2' stroke-width='1' stroke-opacity='0.4'/>
     <g style='isolation: isolate'>
         <text x='16.65%' y='80' text-anchor='middle' fill='#2F97C1' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' style='animation: currstreak 0.6s linear 120ms both'>
-            421
+            451
         </text>
         <text x='16.65%' y='116' text-anchor='middle' fill='#2F97C1' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='14px'>
             Total Contributions
@@ -44,13 +44,13 @@
             </g>
         </svg>
         <text x='50%' y='80' text-anchor='middle' fill='#F5B700' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' style='animation: currstreak 0.6s linear 260ms both'>
-            3
+            4
         </text>
         <text x='50%' y='140' text-anchor='middle' fill='#F5B700' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='14px'>
             Current Streak
         </text>
         <text x='50%' y='166' text-anchor='middle' fill='#0CF574' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='12px'>
-            Sep 5 - Sep 7
+            Sep 5 - Sep 8
         </text>
     </g>
     <g style='isolation: isolate'>
