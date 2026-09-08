@@ -1,7 +1,13 @@
-# Hey, I'm Abdoslam <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">
-![GitHub Views](https://komarev.com/ghpvc/?username=AbdoslamB&color=blue)
-<img alt="Python" src="https://img.shields.io/badge/Python-3.14-red" />
-<img alt="Docker" src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat&logo=docker&logoColor=FFFFFF" />
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=AbdoslamB&color=blue" alt="GitHub Views" />
+  <img alt="Fintech" src="https://img.shields.io/badge/Fintech-0052FF?style=flat&logo=buffer&logoColor=white" />
+  <img alt="Automation" src="https://img.shields.io/badge/Automation-FF6F00?style=flat&logo=githubactions&logoColor=white" />
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />
+  <img alt="SQL" src="https://img.shields.io/badge/SQL-CC292B?style=flat&logo=microsoftsqlserver&logoColor=white" />
+</p>
+
+
 
 ### 🔗  Find me also on :
 <!--START_SECTION:Find me also on-->
