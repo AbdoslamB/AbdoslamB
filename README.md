@@ -51,18 +51,18 @@
 <p align="left">
   <picture>
     <source media="(max-width: 650px)" srcset="./profile/stats-vertical.svg?v=1" width="100%">
-    <img src="./profile/stats.svg?v=1" alt="GitHub Stats for AbdoslamB" width="100%">
+    <img src="./profile/stats.svg?v=1" alt="GitHub Stats for AbdoslamB" width="500">
   </picture>
 </p>
 
 <p align="left">
   <picture>
     <source media="(max-width: 650px)" srcset="./profile/streak-vertical.svg?v=1" width="100%">
-    <img src="./profile/streak.svg?v=1" alt="GitHub Streak for AbdoslamB" width="100%">
+    <img src="./profile/streak.svg?v=1" alt="GitHub Streak for AbdoslamB" width="500">
   </picture>
 </p>
 
 <p align="left">
-  <img src="./profile/top-langs.svg?v=1" alt="Top Languages" width="100%" />
+  <img src="./profile/top-langs.svg?v=1" alt="Top Languages" width="500" />
 </p>
 <!--END_SECTION:github-readme-streak-stats-themes-->
