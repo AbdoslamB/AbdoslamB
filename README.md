@@ -63,6 +63,9 @@
 </p>
 
 <p align="left">
-  <img src="./profile/top-langs.svg?v=1" alt="Top Languages" width="500" />
+  <picture>
+    <source media="(max-width: 650px)" srcset="./profile/top-langs-mobile.svg?v=1" width="100%">
+    <img src="./profile/top-langs.svg?v=1" alt="Top Languages" width="100%">
+  </picture>
 </p>
 <!--END_SECTION:github-readme-streak-stats-themes-->
