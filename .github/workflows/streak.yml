@@ -797,9 +797,29 @@ jobs:
 
       - name: Commit and push cards
         run: |
+          mkdir -p /tmp/generated_cards
+          cp profile/*.svg /tmp/generated_cards/
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
-          git commit -m "chore: update stat cards [skip ci]" || echo "no changes"
-          git pull --rebase
-          git push
+
+          for i in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/generated_cards/*.svg profile/
+            git add profile/*.svg
+            if git diff --staged --quiet; then
+              echo "No changes in stat cards to commit."
+              exit 0
+            fi
+            git commit -m "chore: update stat cards [skip ci]"
+            if git push origin main; then
+              echo "Cards successfully committed and pushed!"
+              exit 0
+            fi
+            echo "Push failed, retrying in 2 seconds..."
+            sleep 2
+          done
+          echo "Failed to push after 3 attempts."
+          exit 1
+
