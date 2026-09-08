@@ -28,25 +28,25 @@ jobs:
           token: ${{ secrets.STREAK_TOKEN }}
 
       - name: Format stats cards (fluid desktop & vertical mobile)
+        shell: python
         run: |
-          python3 -c '
           import re
-          
+
           path_h = "profile/stats.svg"
           path_v = "profile/stats-vertical.svg"
-          
+
           try:
               with open(path_h, "r", encoding="utf-8") as f:
                   s = f.read()
-          
-              stars = re.search(r"data-testid=[\'\"]stars[\'\"][^>]*>([^<]+)<", s)
-              commits = re.search(r"data-testid=[\'\"]commits[\'\"][^>]*>([^<]+)<", s)
-              prs = re.search(r"data-testid=[\'\"]prs[\'\"][^>]*>([^<]+)<", s)
-              issues = re.search(r"data-testid=[\'\"]issues[\'\"][^>]*>([^<]+)<", s)
-              contribs = re.search(r"data-testid=[\'\"]contribs[\'\"][^>]*>([^<]+)<", s)
-              rank = re.search(r"data-testid=[\'\"]level-rank-icon[\'\"][^>]*>([^<]+)<", s)
-              header = re.search(r"data-testid=[\'\"]header[\'\"][^>]*>([^<]+)<", s)
-          
+
+              stars = re.search(r'data-testid="stars"[^>]*>([^<]+)<', s)
+              commits = re.search(r'data-testid="commits"[^>]*>([^<]+)<', s)
+              prs = re.search(r'data-testid="prs"[^>]*>([^<]+)<', s)
+              issues = re.search(r'data-testid="issues"[^>]*>([^<]+)<', s)
+              contribs = re.search(r'data-testid="contribs"[^>]*>([^<]+)<', s)
+              rank = re.search(r'data-testid="level-rank-icon"[^>]*>([^<]+)<', s)
+              header = re.search(r'data-testid="header"[^>]*>([^<]+)<', s)
+
               stars_v = stars.group(1).strip() if stars else "1"
               commits_v = commits.group(1).strip() if commits else "0"
               prs_v = prs.group(1).strip() if prs else "0"
@@ -54,7 +54,7 @@ jobs:
               contribs_v = contribs.group(1).strip() if contribs else "0"
               rank_v = rank.group(1).strip() if rank else "C"
               header_v = header.group(1).strip() if header else "Abdoslam Baabbad's GitHub Stats"
-          
+
               # Format horizontal card with fluid spacing for desktop
               fluid_stats = f"""<svg
             width="100%"
@@ -114,7 +114,7 @@ jobs:
                 to {{ opacity: 1; }}
               }}
             </style>
-          
+
             <rect
               data-testid="card-bg"
               x="0.5"
@@ -126,11 +126,11 @@ jobs:
               fill="#00000000"
               stroke-opacity="1"
             />
-          
+
             <g data-testid="card-title" transform="translate(25, 35)">
               <text x="0" y="0" class="header" data-testid="header">{header_v}</text>
             </g>
-          
+
             <g data-testid="main-card-body">
               <svg x="calc(100% - 85px)" y="105" overflow="visible">
                 <g data-testid="rank-circle">
@@ -139,7 +139,7 @@ jobs:
                   <text x="0" y="2" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" class="rank-text" data-testid="level-rank-icon">{rank_v}</text>
                 </g>
               </svg>
-          
+
               <g transform="translate(0, 55)">
                 <g transform="translate(0, 0)">
                   <g class="stagger" transform="translate(25, 0)">
@@ -150,7 +150,7 @@ jobs:
                     <text class="stat bold" x="235" y="12.5" data-testid="stars">{stars_v}</text>
                   </g>
                 </g>
-          
+
                 <g transform="translate(0, 25)">
                   <g class="stagger" transform="translate(25, 0)">
                     <svg data-testid="icon" class="icon" viewBox="0 0 16 16" width="16" height="16">
@@ -160,7 +160,7 @@ jobs:
                     <text class="stat bold" x="235" y="12.5" data-testid="commits">{commits_v}</text>
                   </g>
                 </g>
-          
+
                 <g transform="translate(0, 50)">
                   <g class="stagger" transform="translate(25, 0)">
                     <svg data-testid="icon" class="icon" viewBox="0 0 16 16" width="16" height="16">
@@ -170,7 +170,7 @@ jobs:
                     <text class="stat bold" x="235" y="12.5" data-testid="prs">{prs_v}</text>
                   </g>
                 </g>
-          
+
                 <g transform="translate(0, 75)">
                   <g class="stagger" transform="translate(25, 0)">
                     <svg data-testid="icon" class="icon" viewBox="0 0 16 16" width="16" height="16">
@@ -180,7 +180,7 @@ jobs:
                     <text class="stat bold" x="235" y="12.5" data-testid="issues">{issues_v}</text>
                   </g>
                 </g>
-          
+
                 <g transform="translate(0, 100)">
                   <g class="stagger" transform="translate(25, 0)">
                     <svg data-testid="icon" class="icon" viewBox="0 0 16 16" width="16" height="16">
@@ -195,7 +195,7 @@ jobs:
           </svg>"""
               with open(path_h, "w", encoding="utf-8") as f:
                   f.write(fluid_stats)
-          
+
               # Format vertical card for mobile view
               vert_stats = f"""<svg
             width="100%"
@@ -254,7 +254,7 @@ jobs:
                 transform: rotate(-90deg);
               }}
             </style>
-          
+
             <rect
               data-testid="card-bg"
               x="0.5"
@@ -266,11 +266,11 @@ jobs:
               fill="#00000000"
               stroke-opacity="1"
             />
-          
+
             <g data-testid="card-title" transform="translate(20, 35)">
               <text x="0" y="0" class="header" data-testid="header">{header_v}</text>
             </g>
-          
+
             <g data-testid="main-card-body">
               <g transform="translate(20, 58)">
                 <svg class="icon" viewBox="0 0 16 16" width="18" height="18" y="2">
@@ -279,7 +279,7 @@ jobs:
                 <text class="stat" x="28" y="16">Total Stars Earned:</text>
                 <text class="stat-val" x="360" y="16" data-testid="stars">{stars_v}</text>
               </g>
-          
+
               <g transform="translate(20, 92)">
                 <svg class="icon" viewBox="0 0 16 16" width="18" height="18" y="2">
                   <path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"/>
@@ -287,7 +287,7 @@ jobs:
                 <text class="stat" x="28" y="16">Total Commits:</text>
                 <text class="stat-val" x="360" y="16" data-testid="commits">{commits_v}</text>
               </g>
-          
+
               <g transform="translate(20, 126)">
                 <svg class="icon" viewBox="0 0 16 16" width="18" height="18" y="2">
                   <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
@@ -295,7 +295,7 @@ jobs:
                 <text class="stat" x="28" y="16">Total PRs:</text>
                 <text class="stat-val" x="360" y="16" data-testid="prs">{prs_v}</text>
               </g>
-          
+
               <g transform="translate(20, 160)">
                 <svg class="icon" viewBox="0 0 16 16" width="18" height="18" y="2">
                   <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"/>
@@ -303,7 +303,7 @@ jobs:
                 <text class="stat" x="28" y="16">Total Issues:</text>
                 <text class="stat-val" x="360" y="16" data-testid="issues">{issues_v}</text>
               </g>
-          
+
               <g transform="translate(20, 194)">
                 <svg class="icon" viewBox="0 0 16 16" width="18" height="18" y="2">
                   <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
@@ -312,9 +312,9 @@ jobs:
                 <text class="stat-val" x="360" y="16" data-testid="contribs">{contribs_v}</text>
               </g>
             </g>
-          
+
             <line x1="20" y1="235" x2="380" y2="235" stroke="#e4e2e2" stroke-opacity="0.25" stroke-width="1.5"/>
-          
+
             <g data-testid="rank-circle" transform="translate(200, 320)">
               <circle class="rank-circle-rim" cx="0" cy="0" r="46" />
               <circle class="rank-circle" cx="0" cy="0" r="46" />
@@ -328,7 +328,6 @@ jobs:
           except Exception as e:
               print("Stats formatter error:", e)
               exit(1)
-          '
 
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
@@ -339,28 +338,27 @@ jobs:
           token: ${{ secrets.STREAK_TOKEN }}
 
       - name: Align top languages card width and mobile boost
+        shell: python
         run: |
-          python3 -c '
           import re
-          
+
           path = "profile/top-langs.svg"
           try:
               with open(path, "r", encoding="utf-8") as f:
                   s = f.read()
-              s = re.sub(r"width=\"\d+\"", "width=\"495\"", s, count=1)
-              s = re.sub(r"viewBox=\"0 0 \d+ \d+\"", "viewBox=\"0 0 495 245\"", s)
-              s = re.sub(r"stroke-opacity=\"1\"", "stroke-opacity=\"0\"", s)
-              s = re.sub(r"font:\s*600\s*18px\s*\'Segoe UI\'", "font: 700 20px \'Segoe UI\'", s)
-              s = re.sub(r"\.lang-name\s*\{\s*font:\s*400\s*11px[^\}]*\}", ".lang-name { font: 600 14px \"Segoe UI\", Ubuntu, Sans-Serif; fill: #0cf574; }", s)
-              s = re.sub(r"width=\"205\"", "width=\"380\"", s)
-              s = re.sub(r"height=\"8\"", "height=\"11\"", s)
-              s = re.sub(r"x=\"215\"", "x=\"390\"", s)
+              s = re.sub(r'width="\d+"', 'width="495"', s, count=1)
+              s = re.sub(r'viewBox="0 0 \d+ \d+"', 'viewBox="0 0 495 245"', s)
+              s = re.sub(r'stroke-opacity="1"', 'stroke-opacity="0"', s)
+              s = re.sub(r"font:\s*600\s*18px\s*'Segoe UI'", "font: 700 20px 'Segoe UI'", s)
+              s = re.sub(r'\.lang-name\s*\{\s*font:\s*400\s*11px[^\}]*\}', '.lang-name { font: 600 14px "Segoe UI", Ubuntu, Sans-Serif; fill: #0cf574; }', s)
+              s = re.sub(r'width="205"', 'width="380"', s)
+              s = re.sub(r'height="8"', 'height="11"', s)
+              s = re.sub(r'x="215"', 'x="390"', s)
               with open(path, "w", encoding="utf-8") as f:
                   f.write(s)
               print("Aligned top-langs card successfully!")
           except Exception as e:
               print("Top-langs align skipped:", e)
-          '
 
       - name: Generate streak stats card
         uses: DenverCoder1/github-readme-streak-stats@main
@@ -370,35 +368,35 @@ jobs:
           token: ${{ secrets.STREAK_TOKEN }}
 
       - name: Smart streak handler (fluid desktop layout & vertical mobile card)
+        shell: python
         run: |
-          python3 -c '
           import re
-          
+
           path_h = "profile/streak.svg"
           path_v = "profile/streak-vertical.svg"
-          
+
           try:
               with open(path_h, "r", encoding="utf-8") as f:
                   s = f.read()
-          
-              num_pat = r"(<!-- Current Streak big number -->\s*<g transform=[\'\"]translate\(247\.5,\s*48\)[\'\"][^>]*>\s*<text[^>]*>)\s*0\s*(</text>\s*</g>)"
+
+              num_pat = r'(<!-- Current Streak big number -->\s*<g transform="translate\(247\.5,\s*48\)"[^>]*>\s*<text[^>]*>)\s*0\s*(</text>\s*</g>)'
               is_zero_streak = bool(re.search(num_pat, s)) or ("Local Dev" in s and "cursorBlink" in s)
-          
-              tot_m = re.search(r"<!-- Total Contributions big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>", s, re.DOTALL)
+
+              tot_m = re.search(r'<!-- Total Contributions big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               tot_num = tot_m.group(1).strip() if tot_m else "421"
-              tot_r_m = re.search(r"<!-- Total Contributions range -->.*?<text[^>]*>\s*([^<]+)\s*</text>", s, re.DOTALL)
+              tot_r_m = re.search(r'<!-- Total Contributions range -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               tot_range = tot_r_m.group(1).strip() if tot_r_m else "Oct 5, 2018 - Present"
-          
-              curr_num_m = re.search(r"<!-- Current Streak big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>", s, re.DOTALL)
+
+              curr_num_m = re.search(r'<!-- Current Streak big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               curr_num = curr_num_m.group(1).strip() if curr_num_m else "3"
-              curr_r_m = re.search(r"<!-- Current Streak range -->.*?<text[^>]*>\s*([^<]+)\s*</text>", s, re.DOTALL)
+              curr_r_m = re.search(r'<!-- Current Streak range -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               curr_range = curr_r_m.group(1).strip() if curr_r_m else "Sep 5 - Sep 7"
-          
-              long_m = re.search(r"<!-- Longest Streak big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>", s, re.DOTALL)
+
+              long_m = re.search(r'<!-- Longest Streak big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               long_num = long_m.group(1).strip() if long_m else "5"
-              long_r_m = re.search(r"<!-- Longest Streak range -->.*?<text[^>]*>\s*([^<]+)\s*</text>", s, re.DOTALL)
+              long_r_m = re.search(r'<!-- Longest Streak range -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               long_range = long_r_m.group(1).strip() if long_r_m else "Dec 11, 2021 - Dec 15, 2021"
-          
+
               if is_zero_streak:
                   curr_h_content = """<!-- Terminal Icon for Local Dev -->
                   <svg x='50%' y='68' overflow='visible'>
@@ -451,10 +449,10 @@ jobs:
                   <text x='50%' y='80' text-anchor='middle' fill='#F5B700' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' style='animation: currstreak 0.6s linear forwards'>
                       {curr_num}
                   </text>
-                  <text x='50%' y='140' text-anchor='middle' fill='#F5B700' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='14px' style='animation: fadein 0.5s linear forwards'>
+                  <text x='50%' y='140' text-anchor='middle' fill='#F5B700' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='14px'>
                       Current Streak
                   </text>
-                  <text x='50%' y='166' text-anchor='middle' fill='#0CF574' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='12px' style='animation: fadein 0.5s linear forwards'>
+                  <text x='50%' y='166' text-anchor='middle' fill='#0CF574' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='12px'>
                       {curr_range}
                   </text>"""
                   curr_v_content = f"""<g mask='url(#mask_out_ring_behind_fire_v)'>
@@ -479,7 +477,7 @@ jobs:
                           {curr_range}
                       </text>
                   </g>"""
-          
+
               fluid_h_svg = f"""<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
                style='isolation: isolate' width='100%' height='195' direction='ltr'>
               <style>
@@ -532,7 +530,7 @@ jobs:
           </svg>"""
               with open(path_h, "w", encoding="utf-8") as f:
                   f.write(fluid_h_svg)
-          
+
               vert_svg = f"""<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
                style='isolation: isolate' viewBox='0 0 390 540' width='100%' height='auto' direction='ltr'>
               <style>
@@ -606,7 +604,6 @@ jobs:
           except Exception as e:
               print("Streak processor error:", e)
               exit(1)
-          '
 
       - name: Commit and push cards
         run: |
