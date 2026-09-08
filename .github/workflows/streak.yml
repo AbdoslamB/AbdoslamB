@@ -36,7 +36,7 @@ jobs:
       - name: Generate streak stats card
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
-          options: "user=AbdoslamB&theme=blue-green&background=00000000&hide_border=true"
+          options: "user=AbdoslamB&theme=blue-green&background=00000000"
           path: profile/streak.svg
           token: ${{ secrets.STREAK_TOKEN }}
 
