@@ -51,14 +51,14 @@
 <p align="left">
   <picture>
     <source media="(max-width: 650px)" srcset="./profile/stats-vertical.svg?v=1" width="100%">
-    <img src="./profile/stats.svg?v=1" alt="GitHub Stats for AbdoslamB" width="500">
+    <img src="./profile/stats.svg?v=1" alt="GitHub Stats for AbdoslamB" width="100%">
   </picture>
 </p>
 
 <p align="left">
   <picture>
     <source media="(max-width: 650px)" srcset="./profile/streak-vertical.svg?v=1" width="100%">
-    <img src="./profile/streak.svg?v=1" alt="GitHub Streak for AbdoslamB" width="500">
+    <img src="./profile/streak.svg?v=1" alt="GitHub Streak for AbdoslamB" width="100%">
   </picture>
 </p>
 
