@@ -1,0 +1,125 @@
+name: Update README stat cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: "username=AbdoslamB&show_icons=true&include_all_commits=true&count_private=true&theme=blue-green&bg_color=00000000"
+          path: profile/stats.svg
+          token: ${{ secrets.STREAK_TOKEN }}
+
+      - name: Boost stats typography for mobile
+        run: |
+          python3 -c '
+          import re
+          path = "profile/stats.svg"
+          try:
+              with open(path, "r", encoding="utf-8") as f:
+                  s = f.read()
+              s = re.sub(r"font:\s*600\s*18px\s*\x27Segoe UI\x27", "font: 700 20px \x27Segoe UI\x27", s)
+              s = re.sub(r"\.stat\s*\{\s*font:\s*600\s*14px[^\}]*\}", ".stat { font: 700 15px \x27Segoe UI\x27, Ubuntu, Sans-Serif; fill: #0cf574; }", s)
+              with open(path, "w", encoding="utf-8") as f:
+                  f.write(s)
+          except Exception as e:
+              print("Stats mobile boost skipped:", e)
+          '
+
+      - name: Generate top languages card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: "username=AbdoslamB&theme=blue-green&bg_color=00000000&hide_border=true&card_width=495&count_private=true&size_weight=0.5&count_weight=0.5&langs_count=6"
+          path: profile/top-langs.svg
+          token: ${{ secrets.STREAK_TOKEN }}
+
+      - name: Align top languages card width and mobile boost
+        run: |
+          python3 -c '
+          import re
+          path = "profile/top-langs.svg"
+          try:
+              with open(path, "r", encoding="utf-8") as f:
+                  s = f.read()
+              s = re.sub(r"width=\"\d+\"", "width=\"495\"", s, count=1)
+              s = re.sub(r"viewBox=\"0 0 \d+ \d+\"", "viewBox=\"0 0 495 245\"", s)
+              s = re.sub(r"stroke-opacity=\"1\"", "stroke-opacity=\"0\"", s)
+              s = re.sub(r"font:\s*600\s*18px\s*\x27Segoe UI\x27", "font: 700 20px \x27Segoe UI\x27", s)
+              s = re.sub(r"\.lang-name\s*\{\s*font:\s*400\s*11px[^\}]*\}", ".lang-name { font: 600 14px \"Segoe UI\", Ubuntu, Sans-Serif; fill: #0cf574; }", s)
+              s = re.sub(r"width=\"205\"", "width=\"380\"", s)
+              s = re.sub(r"height=\"8\"", "height=\"11\"", s)
+              s = re.sub(r"x=\"215\"", "x=\"390\"", s)
+              with open(path, "w", encoding="utf-8") as f:
+                  f.write(s)
+              print("Aligned top-langs card successfully!")
+          except Exception as e:
+              print("Top-langs align skipped:", e)
+          '
+
+      - name: Generate streak stats card
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: "user=AbdoslamB&theme=blue-green&background=00000000"
+          path: profile/streak.svg
+          token: ${{ secrets.STREAK_TOKEN }}
+
+      - name: Smart streak handler (Local Dev mode if streak is 0 & mobile boost)
+        run: |
+          python3 -c '
+          import re
+          path = "profile/streak.svg"
+          try:
+              with open(path, "r", encoding="utf-8") as f:
+                  s = f.read()
+              s = re.sub(r"font-size=\x2712px\x27", "font-size=\x2714px\x27", s)
+              num_pat = r"(<!-- Current Streak big number -->\s*<g transform=[\x27\"]translate\(247\.5,\s*48\)[\x27\"][^>]*>\s*<text[^>]*>)\s*0\s*(</text>\s*</g>)"
+              if re.search(num_pat, s):
+                  if "cursorBlink" not in s:
+                      kf = "\n            @keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }\n            @keyframes devPulse { 0%, 100% { opacity: 0.95; } 50% { opacity: 1; } }\n"
+                      s = s.replace("</style>", kf + "\n        </style>")
+                  icon = """<!-- Animated Local Dev Terminal Icon -->
+                <g transform=\x27translate(247.5, 68)\x27 style=\x27animation: devPulse 2s ease-in-out infinite\x27>
+                    <rect x=\x27-20\x27 y=\x27-15\x27 width=\x2740\x27 height=\x2730\x27 rx=\x274\x27 fill=\x27#0d1117\x27 stroke=\x27#2F97C1\x27 stroke-width=\x271.8\x27/>
+                    <line x1=\x27-20\x27 y1=\x27-7\x27 x2=\x2720\x27 y2=\x27-7\x27 stroke=\x27#2F97C1\x27 stroke-width=\x271\x27 opacity=\x270.4\x27/>
+                    <circle cx=\x27-14\x27 cy=\x27-11\x27 r=\x271.3\x27 fill=\x27#FF5F56\x27/>
+                    <circle cx=\x27-10\x27 cy=\x27-11\x27 r=\x271.3\x27 fill=\x27#FFBD2E\x27/>
+                    <circle cx=\x27-6\x27 cy=\x27-11\x27 r=\x271.3\x27 fill=\x27#27C93F\x27/>
+                    <path d=\x27M -12 -1 L -7 3 L -12 7\x27 fill=\x27none\x27 stroke=\x27#F5B700\x27 stroke-width=\x271.8\x27 stroke-linecap=\x27round\x27 stroke-linejoin=\x27round\x27/>
+                    <line x1=\x27-3\x27 y1=\x277\x27 x2=\x274\x27 y2=\x277\x27 stroke=\x27#0CF574\x27 stroke-width=\x272\x27 stroke-linecap=\x27round\x27 style=\x27animation: cursorBlink 1s step-end infinite\x27/>
+                </g>"""
+                  s = re.sub(num_pat, icon, s)
+                  s = re.sub(r"(<!-- Current Streak label -->\s*<g transform=[\x27\"]translate\(247\.5,\s*108\)[\x27\"][^>]*>\s*<text[^>]*>)\s*Current Streak\s*(</text>)", r"\g<1>Local Dev\g<2>", s)
+                  s = re.sub(r"(<!-- Current Streak range -->\s*<g transform=[\x27\"]translate\(247\.5,\s*145\)[\x27\"][^>]*>\s*<text[^>]*>)\s*[^<]*\s*(</text>)", r"\g<1>Working Offline\g<2>", s)
+              with open(path, "w", encoding="utf-8") as f:
+                  f.write(s)
+              print("Processed streak card successfully!")
+          except Exception as e:
+              print("Streak processor skipped:", e)
+          '
+
+      - name: Commit and push cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "chore: update stat cards [skip ci]" || echo "no changes"
+          git pull --rebase
+          git push
