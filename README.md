@@ -1,4 +1,6 @@
-# Hey, I'm Abdoslam <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">
+# Hey, I'm Abdoslam  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="37">
+<!--<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=150&section=header&text=Hey,%20I'm%20Abdoslam&fontSize=40" />  -->
+<!--[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hey,+I'm+Abdoslam;Welcome+to+my+profile)](https://git.io/typing-svg)  -->
 <p align="left">
   <picture>
     <source media="(max-width: 650px)" srcset="https://komarev.com/ghpvc/?username=AbdoslamB&color=blue&style=for-the-badge" />
