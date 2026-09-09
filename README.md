@@ -1,3 +1,4 @@
+# Hey, I'm Abdoslam <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">
 <p align="left">
   <picture>
     <source media="(max-width: 650px)" srcset="https://komarev.com/ghpvc/?username=AbdoslamB&color=blue&style=for-the-badge" />
