@@ -57,10 +57,10 @@
       <text data-testid="lang-name" x="0" y="14" class="lang-name">Python</text>
       <svg x="0" y="22" width="calc(100% - 120px)" height="11" overflow="hidden">
         <rect data-testid="progress-background" rx="5.5" ry="5.5" x="0" y="0" width="100%" height="11" fill="#ddd" fill-opacity="0.3"/>
-        <rect width="38.93%" height="11" fill="#3572A5" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
+        <rect width="40.63%" height="11" fill="#3572A5" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
       </svg>
       <svg x="calc(100% - 110px)" y="22" width="60" height="15" overflow="visible">
-        <text x="0" y="10" class="lang-pct">38.93%</text>
+        <text x="0" y="10" class="lang-pct">40.63%</text>
       </svg>
     </g>
   </g>
@@ -69,10 +69,10 @@
       <text data-testid="lang-name" x="0" y="14" class="lang-name">JavaScript</text>
       <svg x="0" y="22" width="calc(100% - 120px)" height="11" overflow="hidden">
         <rect data-testid="progress-background" rx="5.5" ry="5.5" x="0" y="0" width="100%" height="11" fill="#ddd" fill-opacity="0.3"/>
-        <rect width="24.69%" height="11" fill="#f1e05a" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
+        <rect width="24.00%" height="11" fill="#f1e05a" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
       </svg>
       <svg x="calc(100% - 110px)" y="22" width="60" height="15" overflow="visible">
-        <text x="0" y="10" class="lang-pct">24.69%</text>
+        <text x="0" y="10" class="lang-pct">24.00%</text>
       </svg>
     </g>
   </g>
@@ -81,10 +81,10 @@
       <text data-testid="lang-name" x="0" y="14" class="lang-name">R</text>
       <svg x="0" y="22" width="calc(100% - 120px)" height="11" overflow="hidden">
         <rect data-testid="progress-background" rx="5.5" ry="5.5" x="0" y="0" width="100%" height="11" fill="#ddd" fill-opacity="0.3"/>
-        <rect width="15.08%" height="11" fill="#198CE7" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
+        <rect width="14.66%" height="11" fill="#198CE7" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
       </svg>
       <svg x="calc(100% - 110px)" y="22" width="60" height="15" overflow="visible">
-        <text x="0" y="10" class="lang-pct">15.08%</text>
+        <text x="0" y="10" class="lang-pct">14.66%</text>
       </svg>
     </g>
   </g>
@@ -93,10 +93,10 @@
       <text data-testid="lang-name" x="0" y="14" class="lang-name">CoffeeScript</text>
       <svg x="0" y="22" width="calc(100% - 120px)" height="11" overflow="hidden">
         <rect data-testid="progress-background" rx="5.5" ry="5.5" x="0" y="0" width="100%" height="11" fill="#ddd" fill-opacity="0.3"/>
-        <rect width="10.58%" height="11" fill="#244776" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
+        <rect width="10.29%" height="11" fill="#244776" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
       </svg>
       <svg x="calc(100% - 110px)" y="22" width="60" height="15" overflow="visible">
-        <text x="0" y="10" class="lang-pct">10.58%</text>
+        <text x="0" y="10" class="lang-pct">10.29%</text>
       </svg>
     </g>
   </g>
@@ -105,10 +105,10 @@
       <text data-testid="lang-name" x="0" y="14" class="lang-name">TSQL</text>
       <svg x="0" y="22" width="calc(100% - 120px)" height="11" overflow="hidden">
         <rect data-testid="progress-background" rx="5.5" ry="5.5" x="0" y="0" width="100%" height="11" fill="#ddd" fill-opacity="0.3"/>
-        <rect width="5.67%" height="11" fill="#e38c00" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
+        <rect width="5.51%" height="11" fill="#e38c00" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
       </svg>
       <svg x="calc(100% - 110px)" y="22" width="60" height="15" overflow="visible">
-        <text x="0" y="10" class="lang-pct">5.67%</text>
+        <text x="0" y="10" class="lang-pct">5.51%</text>
       </svg>
     </g>
   </g>
@@ -117,10 +117,10 @@
       <text data-testid="lang-name" x="0" y="14" class="lang-name">HTML</text>
       <svg x="0" y="22" width="calc(100% - 120px)" height="11" overflow="hidden">
         <rect data-testid="progress-background" rx="5.5" ry="5.5" x="0" y="0" width="100%" height="11" fill="#ddd" fill-opacity="0.3"/>
-        <rect width="5.05%" height="11" fill="#e34c26" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
+        <rect width="4.91%" height="11" fill="#e34c26" rx="5.5" ry="5.5" x="0" y="0" class="lang-progress"/>
       </svg>
       <svg x="calc(100% - 110px)" y="22" width="60" height="15" overflow="visible">
-        <text x="0" y="10" class="lang-pct">5.05%</text>
+        <text x="0" y="10" class="lang-pct">4.91%</text>
       </svg>
     </g>
   </g>
