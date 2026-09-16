@@ -50,60 +50,60 @@
   <g transform="translate(20, 65)">
     <g class="stagger" style="animation-delay: 300ms">
       <text x="0" y="16" class="mobile-lang-name">Python</text>
-      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">49.85%</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">54.03%</text>
       <svg x="0" y="24" width="350" height="16" overflow="hidden">
         <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
-        <rect width="49.85%" height="16" fill="#3572A5" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+        <rect width="54.03%" height="16" fill="#3572A5" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
       </svg>
     </g>
   </g>
   <g transform="translate(20, 121)">
     <g class="stagger" style="animation-delay: 420ms">
       <text x="0" y="16" class="mobile-lang-name">JavaScript</text>
-      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">20.27%</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">18.58%</text>
       <svg x="0" y="24" width="350" height="16" overflow="hidden">
         <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
-        <rect width="20.27%" height="16" fill="#f1e05a" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+        <rect width="18.58%" height="16" fill="#f1e05a" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
       </svg>
     </g>
   </g>
   <g transform="translate(20, 177)">
     <g class="stagger" style="animation-delay: 540ms">
       <text x="0" y="16" class="mobile-lang-name">R</text>
-      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">12.38%</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">11.35%</text>
       <svg x="0" y="24" width="350" height="16" overflow="hidden">
         <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
-        <rect width="12.38%" height="16" fill="#198CE7" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+        <rect width="11.35%" height="16" fill="#198CE7" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
       </svg>
     </g>
   </g>
   <g transform="translate(20, 233)">
     <g class="stagger" style="animation-delay: 660ms">
       <text x="0" y="16" class="mobile-lang-name">CoffeeScript</text>
-      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">8.69%</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">7.97%</text>
       <svg x="0" y="24" width="350" height="16" overflow="hidden">
         <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
-        <rect width="8.69%" height="16" fill="#244776" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+        <rect width="7.97%" height="16" fill="#244776" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
       </svg>
     </g>
   </g>
   <g transform="translate(20, 289)">
     <g class="stagger" style="animation-delay: 780ms">
       <text x="0" y="16" class="mobile-lang-name">TSQL</text>
-      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">4.66%</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">4.27%</text>
       <svg x="0" y="24" width="350" height="16" overflow="hidden">
         <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
-        <rect width="4.66%" height="16" fill="#e38c00" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+        <rect width="4.27%" height="16" fill="#e38c00" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
       </svg>
     </g>
   </g>
   <g transform="translate(20, 345)">
     <g class="stagger" style="animation-delay: 900ms">
       <text x="0" y="16" class="mobile-lang-name">HTML</text>
-      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">4.15%</text>
+      <text x="350" y="16" class="mobile-lang-pct" text-anchor="end">3.80%</text>
       <svg x="0" y="24" width="350" height="16" overflow="hidden">
         <rect rx="8" ry="8" x="0" y="0" width="350" height="16" fill="#ddd" fill-opacity="0.25"/>
-        <rect width="4.15%" height="16" fill="#e34c26" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
+        <rect width="3.80%" height="16" fill="#e34c26" rx="8" ry="8" x="0" y="0" class="lang-progress"/>
       </svg>
     </g>
   </g>
