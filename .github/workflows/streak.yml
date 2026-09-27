@@ -569,23 +569,26 @@ jobs:
               with open(path_h, "r", encoding="utf-8") as f:
                   s = f.read()
 
-              num_pat = r'(<!-- Current Streak big number -->\s*<g transform="translate\(247\.5,\s*48\)"[^>]*>\s*<text[^>]*>)\s*0\s*(</text>\s*</g>)'
-              is_zero_streak = bool(re.search(num_pat, s)) or ("Local Dev" in s and "cursorBlink" in s)
-
               tot_m = re.search(r'<!-- Total Contributions big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               tot_num = tot_m.group(1).strip() if tot_m else "421"
               tot_r_m = re.search(r'<!-- Total Contributions range -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               tot_range = tot_r_m.group(1).strip() if tot_r_m else "Oct 5, 2018 - Present"
 
               curr_num_m = re.search(r'<!-- Current Streak big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
-              curr_num = curr_num_m.group(1).strip() if curr_num_m else "3"
+              curr_num = curr_num_m.group(1).strip() if curr_num_m else "0"
               curr_r_m = re.search(r'<!-- Current Streak range -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
-              curr_range = curr_r_m.group(1).strip() if curr_r_m else "Sep 5 - Sep 7"
+              curr_range = curr_r_m.group(1).strip() if curr_r_m else ""
 
               long_m = re.search(r'<!-- Longest Streak big number -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               long_num = long_m.group(1).strip() if long_m else "5"
               long_r_m = re.search(r'<!-- Longest Streak range -->.*?<text[^>]*>\s*([^<]+)\s*</text>', s, re.DOTALL)
               long_range = long_r_m.group(1).strip() if long_r_m else "Dec 11, 2021 - Dec 15, 2021"
+
+              # Show the "Local Dev" terminal icon when the current streak is 0.
+              # Uses the already-parsed number, so it works regardless of the
+              # quote style or layout of the upstream SVG.
+              is_zero_streak = curr_num.replace(",", "").strip() == "0"
+              print(f"Current streak: {curr_num!r} -> zero streak: {is_zero_streak}")
 
               if is_zero_streak:
                   curr_h_content = """<!-- Terminal Icon for Local Dev -->
@@ -822,4 +825,3 @@ jobs:
           done
           echo "Failed to push after 3 attempts."
           exit 1
-
